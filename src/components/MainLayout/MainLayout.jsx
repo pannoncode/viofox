@@ -11,7 +11,7 @@ const MainLayout = (props) => {
         // background: "linear-gradient(146deg, rgba(128,167,165,1) 55%, rgba(46,162,155,0.6293110994397759) 75%, rgba(210,192,192,1) 83%)",
         // background: "#a0c3c1",
         background:
-          "linear-gradient(146deg, rgba(160,195,176,1) 53%, rgba(46,162,155,0.9178265056022409) 76%)",
+          "linear-gradient(146deg, rgba(160,195,176,0.7) 53%, rgba(46,162,155,0.7178265056022409) 76%)",
       }}
     >
       <Box

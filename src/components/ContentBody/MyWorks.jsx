@@ -14,7 +14,10 @@ const MyWorks = () => {
           justifyContent: "center",
           alignItems: "center",
           p: 1,
-          backgroundColor: "#a0c3c1",
+          //   backgroundColor: "#a0c3c1",
+          //   backgroundColor:"rgba(160,195,176)",
+          background:
+            "radial-gradient(circle, rgba(160,195,176,1) 62%, rgba(46,162,155,0.7178265056022409) 88%)",
           mt: 1,
           boxShadow: 3,
         }}
@@ -25,16 +28,31 @@ const MyWorks = () => {
             color: "#444444",
             textShadow: "0px 0px 8px rgba(255, 255, 255, 0.5)",
             fontWeight: "bold",
+            fontSize: {
+              xs: "1.2rem",
+              sm: "1.3rem",
+              md: "1.5rem",
+              lg: "2rem",
+            },
           }}
           gutterBottom
         >
           Munkáim
         </Typography>
       </Box>
-      <Box sx={{ width: "100%", height: "50rem", overflowY: "scroll" }}>
+      <Box sx={{ width: "100%", overflowY: "scroll" }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {itemData.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem
+              key={item.img}
+              sx={{
+                transition: "transform 0.5s ease, box-shadow 0.5s ease",
+                "&:hover": {
+                  transform: "scale(1.02)",
+                  boxShadow: "0px 10px 15px rgba(0,0,0,0.3)",
+                },
+              }}
+            >
               <img
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=248&fit=crop&auto=format`}

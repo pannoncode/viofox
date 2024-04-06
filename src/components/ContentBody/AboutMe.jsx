@@ -52,41 +52,23 @@ const AboutMe = () => {
           },
           width: "100%",
           overflow: "hidden",
-          height: {
-            xs: "30rem",
-            sm: "30rem",
-            md: "30rem",
-          },
+          backgroundColor:"rgba(160,195,176)",
           mr: {
             md: 0.5,
           },
         }}
       >
-        {/* <CardContent
-          sx={{
-            // backgroundImage: `url(${cardBackGround})`,
-            backgroundSize: "100% 100%",
-            backgroundColor: "transparent",
-            display: "flex",
-            justifyContent: "left",
-            filter: "grayscale(40%)",
-            flexBasis: {
-              xs: "auto",
-              md: "50%",
-            },
-            height: {
-              xs: 300,
-              md: "100%",
-            },
-            flexGrow: 1,
-          }}
-        > */}
         <Box
           sx={{
             width: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+
+            p: {
+              xs: 2,
+              md: 5,
+            },
           }}
         >
           <Typography
@@ -95,7 +77,7 @@ const AboutMe = () => {
               color: "#444444",
               textShadow: "0px 0px 8px rgba(255, 255, 255, 0.5)",
               fontWeight: "bold",
-                mb: 2,
+              mb: 2,
             }}
             gutterBottom
           >
@@ -112,6 +94,7 @@ const AboutMe = () => {
               color: "#444444",
               textShadow: "0px 0px 8px rgba(255, 255, 255, 0.5)",
               fontWeight: "bold",
+              textAlign: "justify",
             }}
             gutterBottom
           >
@@ -168,6 +151,11 @@ const AboutMe = () => {
             },
             flexBasis: {
               xs: "auto",
+            },
+            transition: "transform 0.5s ease, box-shadow 0.5s ease",
+            "&:hover": {
+              transform: "scale(1.02)",
+              boxShadow: "0px 10px 15px rgba(0,0,0,0.3)",
             },
           }}
         />
